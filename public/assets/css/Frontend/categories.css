@@ -1,0 +1,48 @@
+body {
+    background-color: #FFF8EF;
+}
+
+#content {
+    margin-top: 4%;
+    margin-bottom: 2%;
+}
+
+.card {
+    width: 18rem;
+    padding: 4%;
+    border-width: 0;
+    border-radius: 20px;
+    -webkit-box-shadow: 6px 6px 14px 0px rgba(0,0,0,0.13);
+    -moz-box-shadow: 6px 6px 14px 0px rgba(0,0,0,0.13);
+    box-shadow: 6px 6px 14px 0px rgba(0,0,0,0.13);
+}
+
+.table {
+    width: 20%;
+    margin-top: -10px;
+    margin-left: -5px;
+}
+
+#btn-beli {
+    background-color: #FA9828;
+    color: #FFFF;
+}
+#btn-lihat {
+    background-color: #a4b0be;
+    color: #FFFF;
+}
+
+.text-menu {
+    color: #000;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+ }

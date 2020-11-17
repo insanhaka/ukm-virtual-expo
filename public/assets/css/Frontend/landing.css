@@ -1,0 +1,21 @@
+body {
+    background-color: #FFF8EF;
+}
+
+.btn {
+    width: 75%;
+    margin-top: 5%;
+    background-color: #FA9828;
+    color: #FFFF;
+    border-radius: 15px;
+}
+.btn:hover{
+    color: #FFFF;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+ }
