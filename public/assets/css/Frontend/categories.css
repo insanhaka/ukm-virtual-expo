@@ -2,9 +2,23 @@ body {
     background-color: #FFF8EF;
 }
 
+.navbar {
+    height: 80px;
+    background-color: #ffaf40;
+}
+
+.img-head {
+    margin-top: -2%;
+}
+
 #content {
-    margin-top: 4%;
+    margin-top: 20%;
     margin-bottom: 2%;
+}
+
+#menu-item {
+    margin-top: 2%;
+    margin-bottom: 20%;
 }
 
 .card {
@@ -46,3 +60,18 @@ a:link {
     bottom: 0;
     width: 100%;
  }
+
+ /* For Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+    #content {
+        margin-top: -5%;
+        margin-bottom: 2%;
+    }
+
+    #menu-item {
+        margin-top: -3%;
+        margin-bottom: 2%;
+    }
+
+}

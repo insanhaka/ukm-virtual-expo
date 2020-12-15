@@ -15,102 +15,46 @@
   </head>
   <body>
 
-    <nav class="navbar">
+    {{-- Navbar Start --}}
+    <nav class="navbar fixed-top">
         <a class="navbar-brand" href="/">
-            <img src="{{asset('assets/img/brand-opd-01.png')}}" class="img-fluid" alt="Responsive image" width="270">
+            <img src="{{asset('assets/img/navbrand-01.png')}}" class="img-fluid" alt="Responsive image" width="170">
         </a>
     </nav>
+    {{-- Navbar End --}}
+    {{-- Img Header Start --}}
+    <div class="img-head">
+        <img src="{{asset('assets/img/Head-02.png')}}" class="img-fluid" alt="Responsive image">
+    </div>
+    {{-- Img Header End --}}
+
+    {{-- Content Start --}}
     <div class="container text-center" id="content">
         <h3>Kategori Produk</h3>
     </div>
-    <div class="container">
+    <div class="container" id="menu-item">
         <div class="row">
-            <div class="col-md-4" style="padding: 3%;">
+            @foreach ($category as $item)
+            <div class="col-md-4" style="margin-top: 7%;">
                 <center>
-                    <a href="/categories/fashion-dan-aksesoris">
-                    <div class="card">
+                    <a href="/categories/{!!$item['id']!!}-{!!$item['name']!!}">
+                    <div class="card" style="padding-top: 10%;">
                         <center>
-                        <img src="{{asset('assets/img/icons/fashion-01.png')}}" class="img-fluid" alt="Responsive image" width="130">
+                        <img src="{!!$apiurl!!}/menus_icon/{!!$item['icon']!!}" class="img-fluid" alt="Responsive image" width="130">
                         </center>
                         <div class="card-body">
-                            <p class="text-menu text-center">Fashion Dan Aksesoris</p>
+                            <p class="text-menu text-center">{!!$item['name']!!}</p>
                         </div>
                     </div>
                     </a>
                 </center>
             </div>
-            <div class="col-md-4" style="padding: 3%;">
-                <center>
-                    <a href="#">
-                    <div class="card">
-                        <center>
-                        <img src="{{asset('assets/img/icons/food-drink-01.png')}}" class="img-fluid" alt="Responsive image" width="130">
-                        </center>
-                        <div class="card-body">
-                            <p class="text-menu text-center">Food & Drink</p>
-                        </div>
-                    </div>
-                    </a>
-                </center>
-            </div>
-            <div class="col-md-4" style="padding: 3%;">
-                <center>
-                    <a href="#">
-                    <div class="card">
-                        <center>
-                        <img src="{{asset('assets/img/icons/fashion-01.png')}}" class="img-fluid" alt="Responsive image" width="130">
-                        </center>
-                        <div class="card-body">
-                            <p class="text-menu text-center">Fashion & Aksesoris</p>
-                        </div>
-                    </div>
-                    </a>
-                </center>
-            </div>
-            <div class="col-md-4" style="padding: 3%;">
-                <center>
-                    <a href="#">
-                    <div class="card">
-                        <center>
-                        <img src="{{asset('assets/img/icons/fashion-01.png')}}" class="img-fluid" alt="Responsive image" width="130">
-                        </center>
-                        <div class="card-body">
-                            <p class="text-menu text-center">Fashion & Aksesoris</p>
-                        </div>
-                    </div>
-                    </a>
-                </center>
-            </div>
-            <div class="col-md-4" style="padding: 3%;">
-                <center>
-                    <a href="#">
-                    <div class="card">
-                        <center>
-                        <img src="{{asset('assets/img/icons/fashion-01.png')}}" class="img-fluid" alt="Responsive image" width="130">
-                        </center>
-                        <div class="card-body">
-                            <p class="text-menu text-center">Fashion & Aksesoris</p>
-                        </div>
-                    </div>
-                    </a>
-                </center>
-            </div>
-            <div class="col-md-4" style="padding: 3%;">
-                <center>
-                    <a href="#">
-                    <div class="card">
-                        <center>
-                        <img src="{{asset('assets/img/icons/fashion-01.png')}}" class="img-fluid" alt="Responsive image" width="130">
-                        </center>
-                        <div class="card-body">
-                            <p class="text-menu text-center">Fashion & Aksesoris</p>
-                        </div>
-                    </div>
-                    </a>
-                </center>
-            </div>
+            @endforeach
         </div>
     </div>
+    {{-- Content End --}}
+
+    {{-- footer Start --}}
     <div class="footer">
         <div class="row justify-content-between">
             <div class="col-md-3" style="margin-top: 20px;">
@@ -120,6 +64,7 @@
             </div>
         </div>
     </div>
+    {{-- Footer End --}}
 
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->

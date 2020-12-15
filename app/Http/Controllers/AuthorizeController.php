@@ -15,7 +15,7 @@ class AuthorizeController extends Controller
 
     public function postlogin(Request $request)
     {
-
+        
         if (Auth::attempt(['username' => $request->username, 'password' => $request->password]))
         {
             $user = User::where('username', $request->username)->first();
@@ -27,7 +27,6 @@ class AuthorizeController extends Controller
             }
             else
             {
-                Auth::logout();
                 return redirect()->route('notactive');
             }
         }

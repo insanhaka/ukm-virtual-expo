@@ -28,14 +28,14 @@
                     <input class="input100" type="text" id="username" name="username" placeholder="Username">
                     <span class="focus-input100"></span>
                 </div>
-
+                
 
                 <div class="wrap-input100 validate-input m-b-16" data-validate = "Email is required">
                     <input class="input100" type="email" id="email" name="email" placeholder="Email">
                     <span class="focus-input100"></span>
                 </div>
 
-
+                
                 <div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
                     <input class="input100" type="password" id="password" name="password" placeholder="Password">
                     <span class="focus-input100"></span>
@@ -94,7 +94,7 @@
                 }else {
                     signup();
                 }
-
+                
             })
             .catch(function (error) {
                 // handle error
@@ -122,9 +122,9 @@
                         position: 'center',
                         buttons: [
                             ['<button><b>OK</b></button>', function (instance, toast) {
-
+                    
                                 window.location.href = '/login';
-
+                    
                             }, true],
                         ]
                     });
@@ -133,7 +133,7 @@
                     console.log(error);
                 });
             }
-
+            
         });
     });
 </script>

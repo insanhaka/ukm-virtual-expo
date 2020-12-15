@@ -8,7 +8,7 @@ use DB;
 
 class ApiController extends Controller
 {
-
+    
     public function datauser()
     {
         $user = DB::table('users')
@@ -17,6 +17,16 @@ class ApiController extends Controller
 
         return response()->json([
             'datausers' => $user,
+        ]);
+    }
+
+    public function databusiness()
+    {
+        $business = DB::table('business')
+                ->get();
+
+        return response()->json([
+            'databusiness' => $business,
         ]);
     }
 

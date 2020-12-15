@@ -18,7 +18,11 @@ class CreateMenusTable extends Migration
             $table->string('name');
             $table->string('uri');
             $table->string('icon');
+            $table->string('type');
+            $table->integer('parent_id')->nullable();
             $table->boolean('is_active')->nullable();
+            $table->string('created_by', 50);
+            $table->string('updated_by', 50)->nullable();
             $table->timestamps();
         });
     }

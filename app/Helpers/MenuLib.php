@@ -30,25 +30,35 @@ class MenuLib
             $menu_id[] = $id->menu_id;
         }
 
+
         $user_menu = array_unique($menu_id);
         $prefix = str_replace('/','',\Request::route()->getPrefix());
         $menus = Menu::find($user_menu);
 
         foreach($menus as $data_menu)
         {
+
             $menu_name = $data_menu->name;
-            $menu_uri = '/admin'.$data_menu->uri;
+            $menu_uri = '/dapur'.$data_menu->uri;
             $menu_icon = $data_menu->icon;
             $menuID = Str::after($data_menu->uri, '/');
 
-            $html_out = '<li class="nav-item">
-                        <a class="nav-link" href="'.$menu_uri.'" id="'.$menuID.'">
-                            <img src="/menus_icon/'.$menu_icon.'" width="15" style="margin-right: 20px;">
-                            <span class="nav-link-text">'.$menu_name.'</span>
-                        </a>
-                    </li> ' ;
+            if ($data_menu->type === 'parent') {
+                $id_parent = $data_menu->id;
+                $html_out = '<p style="font-size: 12px; color: #a4b0be; margin-top: 15px; margin-left: 25px;">-----------'.$menu_name.'-----------</p>';
+                echo $html_out;
+            }else {
+                if ($data_menu->parent_id == $id_parent) {
+                    $html_out = '<li class="nav-item">
+                            <a class="nav-link" href="'.$menu_uri.'" id="'.$menuID.'">
+                                <img src="/menus_icon/'.$menu_icon.'" width="15" style="margin-right: 20px;">
+                                <span class="nav-link-text">'.$menu_name.'</span>
+                            </a>
+                        </li> ' ;
 
-            echo $html_out;
+                    echo $html_out;
+                }
+            }
         }
 
     }
