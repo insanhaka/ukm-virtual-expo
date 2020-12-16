@@ -20,5 +20,4 @@ use App\Http\Controllers\ApiController;
 // });
 
 
-Route::get('data-user', [ApiController::class, 'datauser']);
-Route::get('data-business', [ApiController::class, 'databusiness']);
+Route::get('data-api-url', [ApiController::class, 'dataurlapi']);

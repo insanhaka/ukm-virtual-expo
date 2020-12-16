@@ -44,7 +44,13 @@ class FrontcategoriesController extends Controller
         {
             if ($item['product_categories_id'] == $category_id) {
                 $data_product[] = $item;
+            }else{
+                $data_product = 'kosong';
             }
+        }
+
+        if ($data_product === "kosong") {
+            return view('Frontend.soryempty');
         }
 
         return view('Frontend.product', ['product' => $data_product, 'photo' => $photo_product, 'category' => $category_name, 'apiurl' => $url]);

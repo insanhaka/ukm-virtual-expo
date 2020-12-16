@@ -24,7 +24,7 @@
 
     {{-- Navbar Start --}}
     <nav class="navbar fixed-top">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand" href="/categories">
             <img src="{{asset('assets/img/navbrand-01.png')}}" class="img-fluid" alt="Responsive image" width="170">
         </a>
     </nav>
@@ -36,7 +36,7 @@
     {{-- Img Header End --}}
 
     <div class="container" id="content">
-        <h3>Produk {!! $category !!}</h3>
+        <h3 class="text-center">Produk {!! $category !!}</h3>
         <hr style="border: solid 1px #FA9828;">
     </div>
     <div class="container">

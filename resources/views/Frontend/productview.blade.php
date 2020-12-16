@@ -17,13 +17,15 @@
     <style>
         .slick-slide, .slick-slide *{ outline: none !important; }
     </style>
+    {{-- Font Awesome Icon CSS --}}
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
 
     <title>Detail Produk</title>
   </head>
   <body>
 
     <nav class="navbar">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand" href="/categories">
             <img src="{{asset('assets/img/navbrand-01.png')}}" class="img-fluid" alt="Responsive image" width="170">
         </a>
     </nav>
@@ -67,7 +69,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <a class="btn btn-block" id="btn-beli" href="/product" role="button" >Beli</a>
+                        <a class="btn btn-block" id="btn-beli" href="/product" role="button" ><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>&nbsp Beli</a>
                     </center>
                     </div>
                 </div>
@@ -119,7 +121,7 @@
                             </tbody>
                         </table>
                     </center>
-                    <a class="btn" id="btn-lihat" href="/product" role="button" >Kunjungi Toko</a>
+                    <a class="btn" id="btn-lihat" href="/product" role="button" ><i class="fa fa-home" aria-hidden="true"></i>&nbsp Kunjungi Toko</a>
                     </div>
                 </div>
             </div>
@@ -137,6 +139,8 @@
             dots: true,
         });
     </script>
+    {{-- Font Awesome Icon JS --}}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
 
   </body>
 </html>

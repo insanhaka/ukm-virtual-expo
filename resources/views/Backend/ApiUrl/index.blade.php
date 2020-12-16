@@ -15,7 +15,7 @@
                     <h2 class="text-primary">Data API Url</h2>
                 </div>
                 <div class="col-md-6 text-right">
-                    <a class="btn btn-primary" href="/dapur/api-url/add" role="button">Add Data</a>
+                    <a class="btn btn-primary" href="#" role="button" id="add-data">Add Data</a>
                 </div>
             </div>
         </div>
@@ -89,6 +89,26 @@
                         position: 'topRight'
                     });
     @endif
+</script>
+
+<script>
+    $( "#add-data" ).click(function() {
+        axios.get('/api/data-api-url')
+            .then(function (response) {
+                var data = response.data.data;
+                var count = data.length;
+
+                if (count > 0) {
+                    alert("Data url API tidak boleh lebih dari satu, silahkan hapus terlebih dahulu data yang ada");
+                }else {
+                    window.location.href = '/dapur/api-url/add';
+                }
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            });
+    });
 </script>
 
 @endsection

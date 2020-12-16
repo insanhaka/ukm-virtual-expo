@@ -3,30 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
-use DB;
+use App\Models\Api_url;
 
 class ApiController extends Controller
 {
     
-    public function datauser()
+    public function dataurlapi()
     {
-        $user = DB::table('users')
-                ->select('name', 'username', 'email')
-                ->get();
+        $api_url = Api_url::all();
 
         return response()->json([
-            'datausers' => $user,
-        ]);
-    }
-
-    public function databusiness()
-    {
-        $business = DB::table('business')
-                ->get();
-
-        return response()->json([
-            'databusiness' => $business,
+            'message' => 'success',
+            'data' => $api_url
         ]);
     }
 

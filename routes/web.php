@@ -14,8 +14,7 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\RolesController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\MenuController;
-// use App\Http\Controllers\SectorController;
-// use App\Http\Controllers\BusinessController;
+use App\Http\Controllers\CategorymenuController;
 use App\Http\Controllers\ApiUrlController;
 
 
@@ -83,26 +82,11 @@ Route::group(['prefix' => 'dapur', 'middleware' => 'auth'], function () {
     Route::post('/api-url/update/{id}', [ApiUrlController::class, 'update']);
     Route::get('/api-url/delete/{id}', [ApiUrlController::class, 'delete']);
 
-    // Route::get('/business-sector', [SectorController::class, 'view'])->name('business-sector');
-    // Route::get('/business-sector/add', [SectorController::class, 'add']);
-    // Route::post('/business-sector/create', [SectorController::class, 'create']);
-    // Route::get('/business-sector/edit/{id}', [SectorController::class, 'edit']);
-    // Route::post('/business-sector/update/{id}', [SectorController::class, 'update']);
-    // Route::get('/business-sector/delete/{id}', [SectorController::class, 'delete']);
-
-    // Route::get('/business', [BusinessController::class, 'view'])->name('business');
-    // Route::get('/business/add', [BusinessController::class, 'add']);
-    // Route::post('/business/create', [BusinessController::class, 'create']);
-    // Route::get('/business/edit/{id}', [BusinessController::class, 'edit']);
-    // Route::post('/business/update/{id}', [BusinessController::class, 'update']);
-    // Route::get('/business/delete/{id}', [BusinessController::class, 'delete']);
-    // Route::get('/business/show/{id}', [BusinessController::class, 'show']);
-    // Route::post('/business/activation', [BusinessController::class, 'activation']);
-
-
-    // Route::post('/getRegenciesFromProvince', function (Request $request) {
-    //     $arrRegencies = App\Regency::where('province_id', $request->paramid)->orderBy('name','asc')->pluck('id','name')->prepend('','');
-    //     return response()->json(['code' => 200,'data' => $arrRegencies], 200);
-    // })->name('getregenciesfromprovince');
+    Route::get('/category-menu', [CategorymenuController::class, 'view'])->name('category-menu');
+    // Route::get('/category-menu/add', [CategorymenuController::class, 'add']);
+    // Route::post('/category-menu/create', [CategorymenuController::class, 'create']);
+    Route::get('/category-menu/edit/{id}', [CategorymenuController::class, 'edit']);
+    Route::post('/category-menu/update/{id}', [CategorymenuController::class, 'update']);
+    Route::get('/category-menu/delete/{id}', [CategorymenuController::class, 'delete']);
 
 });
