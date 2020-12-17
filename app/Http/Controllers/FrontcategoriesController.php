@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
 use App\Models\Api_url;
+use App\Models\Category_menu;
 
 class FrontcategoriesController extends Controller
 {
@@ -17,8 +18,9 @@ class FrontcategoriesController extends Controller
             $url = $value->url;
         }
 
-        $get_category = Http::get($url.'/api/data-product-category');
-        $category = $get_category['data'];
+        // $get_category = Http::get($url.'/api/data-product-category');
+        // $category = $get_category['data'];
+        $category = Category_menu::all();
         // dd($category);
         return view('Frontend.categories', ['category' => $category, 'apiurl' => $url]);
     }
@@ -33,7 +35,9 @@ class FrontcategoriesController extends Controller
         }
 
         $category_id = Str::before($data, '-');
-        $category_name = Str::after($data, '-');
+        $get_category_name = Str::after($data, '-cat!');
+        $category_name = 
+        dd($category_name);
         $get_product = Http::get($url.'/api/data-product');
         $product = $get_product['data'];
 

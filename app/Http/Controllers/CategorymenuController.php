@@ -23,7 +23,7 @@ class CategorymenuController extends Controller
 
             $get_category = Http::get($url.'/api/data-product-category');
             $category = $get_category['data'];
-            
+
             $category_on_database = Category_menu::all();
 
             return view('Backend.CategoryMenu.index', ['category' => $category, 'database' => $category_on_database]);
@@ -53,33 +53,62 @@ class CategorymenuController extends Controller
 
     public function update(Request $request, $id)
     {
+        $menus = Category_menu::where('product_category_id', $id)->first();
 
-        dd($request->all());
+        if ($menus == null) {
 
-        $file = $request->file('icon');
+            $create = new Category_menu;
+            $create->product_category_id = $id;
+            $create->product_category_name = $request->product_category_name;
+            $create->product_category_uri = $request->product_category_uri;
+            $create->is_active = $request->is_active;
 
-        $menus = Menu::findOrFail($id);
-
-        if($file == null){
-            echo "<h2>GAMBAR HARUS DI ISI YAH !!!!!!</h2>";
-        }else{
-            $nama_file = time()."_".$file->getClientOriginalName();
-            // isi dengan nama folder tempat kemana file diupload
-            $tujuan_upload = 'menus_icon';
-            $file->move($tujuan_upload,$nama_file);
-
-            $menus->name = $request->name;
-            $menus->uri = $request->uri;
-            $menus->is_active = $request->is_active;
-            $menus->icon = $nama_file;
-
-            $process = $menus->save();
-
-            if ($process) {
-                return redirect(url('/dapur/category-menu'))->with('updated','Data Berhasil Disimpan');
-            } else {
-                return back()->with('warning','Data Gagal Disimpan');
+            // menyimpan data file yang diupload ke variabel $file
+            $file = $request->file('icon');
+            if($file == null){
+                $nama_file = "";
+                $create->icon = $nama_file;
+            }else{
+                $nama_file = time()."_".$file->getClientOriginalName();
+                // isi dengan nama folder tempat kemana file diupload
+                $tujuan_upload = 'menus_icon';
+                $file->move($tujuan_upload, $nama_file);
+                $create->icon = $nama_file;
             }
+
+                $process = $create->save();
+                if ($process) {
+                    return redirect(url('/dapur/category-menu'))->with('updated','Data Berhasil Disimpan');
+                } else {
+                    return back()->with('warning','Data Gagal Disimpan');
+                }
+
+        }else {
+
+            $menus->product_category_id = $id;
+            $menus->product_category_name = $request->product_category_name;
+            $menus->product_category_uri = $request->product_category_uri;
+            $menus->is_active = $request->is_active;
+
+            // menyimpan data file yang diupload ke variabel $file
+            $file = $request->file('icon');
+            if($file == null){
+                $nama_file = "";
+                $menus->icon = $nama_file;
+            }else{
+                $nama_file = time()."_".$file->getClientOriginalName();
+                // isi dengan nama folder tempat kemana file diupload
+                $tujuan_upload = 'menus_icon';
+                $file->move($tujuan_upload, $nama_file);
+                $menus->icon = $nama_file;
+            }
+
+                $process = $menus->save();
+                if ($process) {
+                    return redirect(url('/dapur/category-menu'))->with('updated','Data Berhasil Disimpan');
+                } else {
+                    return back()->with('warning','Data Gagal Disimpan');
+                }
         }
 
     }

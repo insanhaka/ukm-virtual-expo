@@ -1,7 +1,7 @@
-@extends('SuperAdmin.Layouts.app')
+@extends('Backend.Layout.app')
 
 @section('css')
-    
+
 @endsection
 
 @section('content')
@@ -67,14 +67,14 @@
             </form>
         </div>
     </div>
-    
-</div>    
+
+</div>
 @endsection
 
 @section('js')
 <script>
-    $(document).ready(function() {   
-        $("#menu").addClass("active");
+    $(document).ready(function() {
+        $("#category-menu").addClass("active");
     });
 </script>
 

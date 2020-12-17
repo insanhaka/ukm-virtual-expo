@@ -37,13 +37,13 @@
             @foreach ($category as $item)
             <div class="col-md-4" style="margin-top: 7%;">
                 <center>
-                    <a href="/categories/{!!$item['id']!!}-{!!$item['name']!!}">
+                    <a href="/categories/{!!$item->product_category_id!!}-cat!{!!$item->product_category_uri!!}">
                     <div class="card" style="padding-top: 10%;">
                         <center>
-                        <img src="{!!$apiurl!!}/menus_icon/{!!$item['icon']!!}" class="img-fluid" alt="Responsive image" width="130">
+                        <img src="{{asset('menus_icon/'.$item->icon.'')}}" class="img-fluid" alt="Responsive image" width="130">
                         </center>
                         <div class="card-body">
-                            <p class="text-menu text-center">{!!$item['name']!!}</p>
+                            <p class="text-menu text-center">{!!$item->product_category_name!!}</p>
                         </div>
                     </div>
                     </a>

@@ -1,7 +1,7 @@
 @extends('Backend.Layout.app')
 
 @section('css')
-    
+
 @endsection
 
 @section('content')
@@ -82,8 +82,8 @@
                         <td>{!!$item->product_category_name!!}</td>
                         <td>{!!$item->product_category_uri!!}</td>
                         <td>
-                            <a style="margin-right: 20px;" href="{{url()->current().'/edit/'.$item->id}}"><i class="fa fa-edit text-primary" style="font-size: 21px;"></i></a>
-                            <a style="margin-right: 10px;" href="{{url()->current().'/delete/'.$item->id}}"><i class="fa fa-trash text-primary" style="font-size: 21px;"></i></a>
+                            <a style="margin-right: 20px;" href="{{url()->current().'/edit/'.$item->product_category_id}}"><i class="fa fa-edit text-primary" style="font-size: 21px;"></i></a>
+                            <a style="margin-right: 10px;" href="{{url()->current().'/delete/'.$item->product_category_id}}"><i class="fa fa-trash text-primary" style="font-size: 21px;"></i></a>
                         </td>
                     </tr>
                     @endforeach
@@ -91,13 +91,13 @@
             </table>
         </div>
     </div>
-    
-</div>      
+
+</div>
 @endsection
 
 @section('js')
 <script>
-    $(document).ready(function() {   
+    $(document).ready(function() {
         $("#category-menu").addClass("active");
     });
 </script>
