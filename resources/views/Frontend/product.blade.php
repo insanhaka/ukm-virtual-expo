@@ -89,7 +89,11 @@
                         </table>
                         <div class="row">
                             <div class="col-md-6">
-                                <a class="btn btn-block" id="btn-beli" href="/product" role="button" >Beli</a>
+                                @foreach ($business as $val)
+                                    @if ($val['id'] == $item['business_id'])
+                                    <a class="btn btn-block" id="btn-beli" href="https://wa.me/+62{!!$val['contact']!!}" role="button" >Beli</a>
+                                    @endif
+                                @endforeach
                             </div>
                             <div class="col-md-6">
                                 <a class="btn btn-block" id="btn-lihat" href="/product/detail/{!! $item['id'] !!}" role="button">Detail</a>

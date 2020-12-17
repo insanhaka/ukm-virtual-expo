@@ -34,29 +34,45 @@ class FrontcategoriesController extends Controller
             $url = $value->url;
         }
 
-        $category_id = Str::before($data, '-');
-        $get_category_name = Str::after($data, '-cat!');
-        $category_name = 
-        dd($category_name);
+        $category_id = intval(Str::before($data, '-'));
+        $get_category_name = Category_menu::where('product_category_id', $category_id)->first();
+        $category_name = $get_category_name->product_category_name;
+
+        // dd($category_id);
+
+        $get_business = Http::get($url.'/api/data-business');
+        $business = $get_business['data'];
+        
         $get_product = Http::get($url.'/api/data-product');
         $product = $get_product['data'];
 
         $get_photo_product = Http::get($url.'/api/data-photo-product');
         $photo_product = $get_photo_product['data'];
 
+        // dd($product);
+
         foreach( $product as $item )
         {
             if ($item['product_categories_id'] == $category_id) {
                 $data_product[] = $item;
-            }else{
-                $data_product = 'kosong';
             }
         }
 
-        if ($data_product === "kosong") {
-            return view('Frontend.soryempty');
-        }
+        return view('Frontend.product', ['business' => $business, 'product' => $data_product, 'photo' => $photo_product, 'category' => $category_name, 'apiurl' => $url]);
 
-        return view('Frontend.product', ['product' => $data_product, 'photo' => $photo_product, 'category' => $category_name, 'apiurl' => $url]);
+        // foreach( $product as $item )
+        // {
+        //     if ($item['product_categories_id'] == $category_id) {
+        //         $data_product[] = $item;
+        //     }else{
+        //         $data_product = 'kosong';
+        //     }
+        // }
+
+        // if ($data_product === "kosong") {
+        //     return view('Frontend.soryempty');
+        // }
+
+        // return view('Frontend.product', ['product' => $data_product, 'photo' => $photo_product, 'category' => $category_name, 'apiurl' => $url]);
     }
 }

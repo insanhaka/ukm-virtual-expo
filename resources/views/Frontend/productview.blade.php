@@ -69,7 +69,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <a class="btn btn-block" id="btn-beli" href="/product" role="button" ><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>&nbsp Beli</a>
+                        <a class="btn btn-block" id="btn-beli" href="https://wa.me/+62{!!$business['contact']!!}" role="button" ><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>&nbsp Beli</a>
                     </center>
                     </div>
                 </div>
