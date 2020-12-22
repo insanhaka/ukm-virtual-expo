@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontlandingController;
 use App\Http\Controllers\FrontcategoriesController;
 use App\Http\Controllers\FrontproductController;
+use App\Http\Controllers\FrontbusinessController;
 
 //===============BACKEND ROUTE================//
 use App\Http\Controllers\AuthorizeController;
@@ -25,6 +26,7 @@ Route::get('/', [FrontlandingController::class, 'index'])->name('landing');
 Route::get('/categories', [FrontcategoriesController::class, 'index'])->name('front-categorie');
 Route::get('/categories/{data}', [FrontcategoriesController::class, 'category']);
 Route::get('/product/detail/{id}', [FrontproductController::class, 'detail'])->name('product-detail');
+Route::get('/business/{id}', [FrontbusinessController::class, 'detail'])->name('business-detail');
 
 //=========================BACKEND ROUTE=================================//
 

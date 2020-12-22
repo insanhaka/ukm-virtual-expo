@@ -121,7 +121,7 @@
                             </tbody>
                         </table>
                     </center>
-                    <a class="btn" id="btn-lihat" href="/product" role="button" ><i class="fa fa-home" aria-hidden="true"></i>&nbsp Kunjungi Toko</a>
+                    <a class="btn" id="btn-lihat" href="/business/{!!$business['id']!!}" role="button" ><i class="fa fa-home" aria-hidden="true"></i>&nbsp Kunjungi Toko</a>
                     </div>
                 </div>
             </div>
