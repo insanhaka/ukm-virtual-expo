@@ -42,7 +42,7 @@ class FrontcategoriesController extends Controller
 
         $get_business = Http::get($url.'/api/data-business');
         $business = $get_business['data'];
-        
+
         $get_product = Http::get($url.'/api/data-product');
         $product = $get_product['data'];
 

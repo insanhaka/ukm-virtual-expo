@@ -38,7 +38,7 @@
             <div class="col-md-4" style="margin-top: 7%;">
                 <center>
                     <a href="/categories/{!!$item->product_category_id!!}-cat!{!!$item->product_category_uri!!}">
-                    <div class="card" style="padding-top: 10%;">
+                    <div class="card" style="padding-top: 10%; background-color: #FFFDF9">
                         <center>
                         <img src="{{asset('menus_icon/'.$item->icon.'')}}" class="img-fluid" alt="Responsive image" width="130">
                         </center>

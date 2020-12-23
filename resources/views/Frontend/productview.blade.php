@@ -34,7 +34,7 @@
         <hr style="border: solid 1px #FA9828;">
     </div>
     <div class="container" style="margin-top: 2%">
-        <div class="card">
+        <div class="card" style="background-color: #FFFDF9">
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-5" style="margin-top: 2%; margin-bottom: 2%;">
@@ -83,7 +83,7 @@
     </div>
 
     <div class="container" style="margin-top: 2%; margin-bottom: 5%">
-        <div class="card">
+        <div class="card" style="background-color: #FFFDF9">
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-5" style="margin-top: 2%; margin-bottom: 2%;">
@@ -91,7 +91,7 @@
                         <div class="photo-business">
                             <div>
                                 @if ($business['photo'] == null)
-                                <img src="{{asset('assets/img/no-image.jpg')}}" class="img-fluid" alt="Responsive image" width="200">
+                                <img src="{{asset('assets/img/default-image.jpg')}}" class="img-fluid" alt="Responsive image" width="200">
                                 @else
                                 <img src="{!!$apiurl!!}/business_photo/{!!$business['photo']!!}" class="img-fluid" alt="Responsive image" width="200">
                                 @endif

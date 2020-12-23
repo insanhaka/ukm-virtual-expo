@@ -65,7 +65,7 @@
         <div class="row">
             @foreach ($product as $item)
             <div class="col-md-3" style="margin: 2%;">
-                <div class="card">
+                <div class="card" style="background-color: #FFFDF9;">
                     <center>
                         <div class="photo-product">
                             @foreach ($photo as $pict)

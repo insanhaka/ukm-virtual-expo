@@ -16,6 +16,9 @@ class FrontbusinessController extends Controller
             $url = $value->url;
         }
 
+        $get_owner = Http::get($url.'/api/data-owner');
+        $owner = $get_owner['data'];
+
         $get_business = Http::get($url.'/api/data-business');
         $business = $get_business['data'];
 
@@ -33,6 +36,24 @@ class FrontbusinessController extends Controller
             }
         }
 
-        return view('Frontend.business', ['apiurl' => $url, 'business' => $data_business]);
+        foreach( $product as $item )
+        {
+            if ( $item['business_id'] == $id )
+            {
+                $data_product[] = $item;
+            }
+        }
+
+        $count_product = count($data_product);
+
+        foreach( $owner as $person )
+        {
+            if( $data_business['business_owner_id'] == $person['id'] )
+            {
+                $data_owner = $person;
+            }
+        }
+
+        return view('Frontend.business', ['apiurl' => $url, 'business' => $data_business, 'photo' => $photo_product, 'product' => $data_product, 'count_product' => $count_product, 'owner' => $data_owner]);
     }
 }

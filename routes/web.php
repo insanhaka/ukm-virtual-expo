@@ -7,6 +7,7 @@ use App\Http\Controllers\FrontlandingController;
 use App\Http\Controllers\FrontcategoriesController;
 use App\Http\Controllers\FrontproductController;
 use App\Http\Controllers\FrontbusinessController;
+use App\Http\Controllers\FrontsellerController;
 
 //===============BACKEND ROUTE================//
 use App\Http\Controllers\AuthorizeController;
@@ -27,6 +28,8 @@ Route::get('/categories', [FrontcategoriesController::class, 'index'])->name('fr
 Route::get('/categories/{data}', [FrontcategoriesController::class, 'category']);
 Route::get('/product/detail/{id}', [FrontproductController::class, 'detail'])->name('product-detail');
 Route::get('/business/{id}', [FrontbusinessController::class, 'detail'])->name('business-detail');
+
+Route::get('/sellers', [FrontsellerController::class, 'intro'])->name('become-seller');
 
 //=========================BACKEND ROUTE=================================//
 
