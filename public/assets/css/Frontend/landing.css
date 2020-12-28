@@ -9,9 +9,9 @@ body {
     color: #FFFF;
     border-radius: 15px;
     border-width: 0;
-    -webkit-box-shadow: 6px 6px 14px 0px rgba(0,0,0,0.13);
+    /* -webkit-box-shadow: 6px 6px 14px 0px rgba(0,0,0,0.13);
     -moz-box-shadow: 6px 6px 14px 0px rgba(0,0,0,0.13);
-    box-shadow: 6px 6px 14px 0px rgba(0,0,0,0.13);
+    box-shadow: 6px 6px 14px 0px rgba(0,0,0,0.13); */
 }
 #cutomers:hover{
     color: #FFFF;
@@ -24,9 +24,9 @@ body {
     color: #FFFF;
     border-radius: 15px;
     border-width: 0;
-    -webkit-box-shadow: 6px 6px 14px 0px rgba(0,0,0,0.13);
+    /* -webkit-box-shadow: 6px 6px 14px 0px rgba(0,0,0,0.13);
     -moz-box-shadow: 6px 6px 14px 0px rgba(0,0,0,0.13);
-    box-shadow: 6px 6px 14px 0px rgba(0,0,0,0.13);
+    box-shadow: 6px 6px 14px 0px rgba(0,0,0,0.13); */
 }
 #sellers:hover{
     color: #FFFF;

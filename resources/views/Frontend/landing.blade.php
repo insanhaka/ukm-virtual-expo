@@ -22,7 +22,7 @@
             <div class="col-md-6" id="img-people">
                 <img src="{{asset('assets/img/left-01.png')}}" class="img-fluid" alt="Responsive image">
             </div>
-            <div class="col-md-6" style="margin-top: 8%;">
+            <div class="col-md-6" style="margin-top: 5%;">
                 <center>
                 <h1 class="text-center">SELAMAT DATANG <br> DI UKM VIRTUAL EXPO</h1>
                 <a class="btn btn-lg" href="/categories" role="button" id="cutomers">CARI PRODUK</a>

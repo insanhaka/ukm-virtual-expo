@@ -9,6 +9,6 @@ class FrontsellerController extends Controller
 {
     public function intro()
     {
-        return view('Frontend.Sellers.intro');
+        return view('Frontend.Sellers.intro'); 
     }
 }

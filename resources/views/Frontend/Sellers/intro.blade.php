@@ -19,15 +19,15 @@
     </div>
     <div class="container" style="margin-top: 2%">
         <div class="row">
-            <div class="col-md-6" id="img-people">
-                <img src="{{asset('assets/img/left-01.png')}}" class="img-fluid" alt="Responsive image">
-            </div>
-            <div class="col-md-6" style="margin-top: 8%;">
+            <div class="col-md-6" style="margin-top: 5%;">
                 <center>
-                <h1 class="text-center">SELAMAT DATANG <br> DI UKM VIRTUAL EXPO</h1>
-                <a class="btn btn-lg" href="/categories" role="button" id="cutomers">CARI PRODUK</a>
-                <a class="btn btn-lg" href="/sellers" role="button" id="sellers">MENJADI PENJUAL</a>
+                <h5>Maaf, Untuk saat ini pelaku usaha yang <br> dapat ditampilkan pada UKM VIRTUAL EXPO <br> hanya yang sudah terdata pada dinas</h5>
+                <p>Tetapi jangan khawatir, nanti fitur pendaftaran ini akan dibuka <br> silahkan cek secara berkala.</p>
+                <a class="btn btn-lg" href="/" role="button" id="cutomers">Oke, Kembali</a>
                 </center>
+            </div>
+            <div class="col-md-6" id="img-people" style="margin-top: -4%">
+                <img src="{{asset('assets/img/sory-right-01.png')}}" alt="Responsive image" height="450">
             </div>
         </div>
     </div>
