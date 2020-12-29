@@ -1,0 +1,49 @@
+body {
+    background-color: #FFF8EF;
+}
+
+.navbar {
+    height: 80px;
+    background-color: #ffaf40;
+}
+
+.img-head {
+    margin-top: -2%;
+}
+
+#cutomers {
+    width: 75%;
+    margin-top: 5%;
+    background-color: #FA9828;
+    color: #FFFF;
+    border-radius: 15px;
+    border-width: 0;
+    /* -webkit-box-shadow: 6px 6px 14px 0px rgba(0,0,0,0.13);
+    -moz-box-shadow: 6px 6px 14px 0px rgba(0,0,0,0.13);
+    box-shadow: 6px 6px 14px 0px rgba(0,0,0,0.13); */
+}
+#cutomers:hover{
+    color: #FFFF;
+}
+
+#sellers {
+    width: 75%;
+    margin-top: 2%;
+    background-color: #d3d1c5;
+    color: #FFFF;
+    border-radius: 15px;
+    border-width: 0;
+    /* -webkit-box-shadow: 6px 6px 14px 0px rgba(0,0,0,0.13);
+    -moz-box-shadow: 6px 6px 14px 0px rgba(0,0,0,0.13);
+    box-shadow: 6px 6px 14px 0px rgba(0,0,0,0.13); */
+}
+#sellers:hover{
+    color: #FFFF;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+ }

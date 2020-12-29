@@ -112,4 +112,15 @@ class CategorymenuController extends Controller
         }
 
     }
+
+    public function delete($id)
+    {
+        $process = Category_menu::where('product_category_id', $id)->delete();
+
+        if ($process) {
+            return redirect(url('/dapur/category-menu'))->with('deleted','Data Berhasil Dihapus');
+        } else {
+            return back()->with('warning','Data Gagal Dihapus');
+        }
+    }
 }

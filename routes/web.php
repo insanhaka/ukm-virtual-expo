@@ -8,6 +8,7 @@ use App\Http\Controllers\FrontcategoriesController;
 use App\Http\Controllers\FrontproductController;
 use App\Http\Controllers\FrontbusinessController;
 use App\Http\Controllers\FrontsellerController;
+use App\Http\Controllers\FrontsellerauthController;
 
 //===============BACKEND ROUTE================//
 use App\Http\Controllers\AuthorizeController;
@@ -30,6 +31,8 @@ Route::get('/product/detail/{id}', [FrontproductController::class, 'detail'])->n
 Route::get('/business/{id}', [FrontbusinessController::class, 'detail'])->name('business-detail');
 
 Route::get('/sellers', [FrontsellerController::class, 'intro'])->name('become-seller');
+Route::get('/sellers/register', [FrontsellerauthController::class, 'register'])->name('seller-register');
+Route::get('/sellers/verification', [FrontsellerauthController::class, 'verification'])->name('seller-verification');
 
 //=========================BACKEND ROUTE=================================//
 

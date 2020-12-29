@@ -1,7 +1,7 @@
 @extends('SuperAdmin.Layouts.app')
 
 @section('css')
-    
+
 @endsection
 
 @section('content')
@@ -67,13 +67,13 @@
             </table>
         </div>
     </div>
-    
-</div>    
+
+</div>
 @endsection
 
 @section('js')
 <script>
-    $(document).ready(function() {   
+    $(document).ready(function() {
         $("#menu").addClass("active");
     });
 </script>
