@@ -19,15 +19,15 @@
     </div>
     <div class="container" style="margin-top: 2%">
         <div class="row">
-            <div class="col-md-6" id="img-people">
-                <img src="{{asset('assets/img/left-01.png')}}" class="img-fluid" alt="Responsive image">
-            </div>
-            <div class="col-md-6" style="margin-top: 5%;">
-                <center>
-                <h1 class="text-center">SELAMAT DATANG <br> DI UKM VIRTUAL EXPO</h1>
+            <div class="col-md-5" style="padding-top: 3%;">
+                <p style="font-size: 45px;">"DOLAN"</p>
+                <p style="font-size: 60px; font-weight: bold; margin-top: -9%;">Dodolan Online</p>
+                <p style="margin-top: -3%;">Platform <b>UKM Virtual Expo</b> yang diselenggarakan oleh Pemerintah Kabupaten Tegal, untuk mengenalkan produk-produk pelaku usaha lokal.</p>
                 <a class="btn btn-lg" href="/categories" role="button" id="cutomers">CARI PRODUK</a>
                 <a class="btn btn-lg" href="/sellers" role="button" id="sellers">MENJADI PENJUAL</a>
-                </center>
+            </div>
+            <div class="col-md-7" id="img-people">
+                <img src="{{asset('assets/img/left-01.png')}}" class="img-fluid" alt="Responsive image">
             </div>
         </div>
     </div>

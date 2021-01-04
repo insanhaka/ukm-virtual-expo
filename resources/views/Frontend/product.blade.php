@@ -54,7 +54,7 @@
                 </div>
             </div>
             <div class="col-md-5">
-                <form class="form-inline" style="float: right;">
+                <form class="form-inline" style="float: right;" action="/product/search" method="GET">
                     <input class="form-control mr-sm-1" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-success" type="submit" style="background-color: #FA9828; border-color: #FA9828;">Search</button>
                 </form>

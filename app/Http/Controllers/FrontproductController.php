@@ -44,4 +44,19 @@ class FrontproductController extends Controller
 
         return view('Frontend.productview', ['product' => $data_product, 'photo' => $photo_product, 'apiurl' => $url, 'business' => $data_business]);
     }
+
+    public function cari(Request $request)
+    {
+        // menangkap data pencarian
+        $cari = $request->cari;
+
+        // mengambil data dari table pegawai sesuai pencarian data
+        $pegawai = DB::table('pegawai')
+        ->where('pegawai_nama','like',"%".$cari."%")
+        ->paginate();
+
+            // mengirim data pegawai ke view index
+        return view('index',['pegawai' => $pegawai]);
+
+    }
 }

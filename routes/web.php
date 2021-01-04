@@ -28,6 +28,7 @@ Route::get('/', [FrontlandingController::class, 'index'])->name('landing');
 Route::get('/categories', [FrontcategoriesController::class, 'index'])->name('front-categorie');
 Route::get('/categories/{data}', [FrontcategoriesController::class, 'category']);
 Route::get('/product/detail/{id}', [FrontproductController::class, 'detail'])->name('product-detail');
+Route::get('/product/search', [FrontproductController::class, 'search'])->name('product-search');
 Route::get('/business/{id}', [FrontbusinessController::class, 'detail'])->name('business-detail');
 
 Route::get('/sellers', [FrontsellerController::class, 'intro'])->name('become-seller');
